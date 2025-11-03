@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# if api/ is requested, show it
+RewriteRule ^api/(.*)$ api/$1 [L]
+
+# if anything else than api/ is requested, show it from public
+RewriteRule ^(?!api/)(.*)$ public/$1 [L]
